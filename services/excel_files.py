@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 from config import Config
-# import openpyxl
+import openpyxl
 
 def save_to_excel(data):
     try:
