@@ -10,6 +10,7 @@ def fetch_weather():
         url = f"https://api.openweathermap.org/data/2.5/weather?q={Config.QUERY}&appid={Config.API_KEY}"
         res = requests.get(url)
         data = res.json()
+        print(data)
         weather = {"temperatura": convert_to_celsius(data["main"]["temp"]),
             "odczuwalna": convert_to_celsius(data["main"]["feels_like"]),
             "cisnienie": data["main"]["pressure"],
